@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/object-diagram
+'had to recieve help for documentation from chatgpt
+object Building{
+   - rooms: ArrayList<Room> = ArrayList;
+   - int buildings;
+   - int numberOfFloors;
+   - boolean isOfficeBuilding;
+   + getNumberOfBathrooms();
+   + getNumberOfFloors();
+   + getIsOfficeBuilding();
+}
+
+object Main{
+
+}
+
+object Room{
+    - int numberOfDoors;
+    - int numberofLamps;
+    - int numberOfWindos;
+    + getNumberOfDoors();
+    + getNumberOfLamps();
+    + getNumberOfWindows();
+}
+
+Building *--Room
+Main *--Room
+
+
+@enduml
